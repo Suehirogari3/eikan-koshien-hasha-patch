@@ -1,0 +1,36 @@
+# 実機PS2 / PS2互換PS3用パッチ(IPS形式)
+
+`eikan_koshien_hasha_v1.0.ips` は、PCSX2用の`.pnach`パッチと同じ2つの不具合修正を、実機のディスクイメージ(ISO)に直接適用できる形式にしたものです。
+
+## 含まれる修正内容
+
+1. 練習試合の対戦相手が池田高校に固定されるバグの修正
+2. 組んでいない相手校との練習試合(幽霊試合)が表示されるバグの修正
+
+内容はPCSX2用パッチと同一です。
+
+## 対象
+
+- ディスクID: `SLPS-25053`(Ver 1.02、PCSX2が報告するCRC: `77E8D14C`)
+- 自分で吸い出した(ダンプした)正規のISOファイルに適用してください。ISOファイル自体の配布は行っていません。
+
+## 必要なもの
+
+- 上記の正規ISOファイル(自分で用意)
+- IPSパッチ適用ツール(例: [Lunar IPS](https://fusoya.eludevisibility.org/lips/)、[Flips](https://github.com/Alcaro/Flips) など、Windows/Mac対応の無料ツール)
+
+## 適用手順
+
+1. IPSパッチ適用ツールを開く
+2. 「Apply Patch」等の項目で、`eikan_koshien_hasha_v1.0.ips` を選択
+3. 続けて、お手持ちの正規ISOファイルを選択
+4. 修正済みのISOファイルが生成されます
+
+## 実機での利用方法(参考)
+
+- **PS2実機**: Free McBoot(FMCB)+ Open PS2 Loader(OPL)を導入し、USBメモリやHDD経由で修正済みISOを起動する方法が、本体を分解・改造せずに済むためお勧めです
+- **PS3(PS2互換モデル)**: 完全ハードウェア互換モデル(初期型20GB/60GB、CECHB/CECHAシリーズ、Emotion Engine・Graphics Synthesizer両チップ搭載)なら、修正済みISOをDVD-Rに焼いて通常のPS2ディスクと同様に起動可能な場合があります。80GBモデル(CECHEシリーズ)はGraphics Synthesizerのみでソフトウェア処理併用のため互換性がやや劣り、それ以降のモデルはCFW環境が必要です
+
+## 検証状況
+
+パッチの適用・バイト単位での書き込み内容は開発環境で検証済みです。ただし、実機PS2・PS3での実際の動作確認はまだ行っていません。動作報告をいただけると助かります。
