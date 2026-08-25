@@ -1,0 +1,16 @@
+gametitle=栄冠は君に 甲子園の覇者
+comment=練習試合バグ修正(Cheats形式・個別ON/OFF可能版)
+
+[練習試合の対戦相手が池田高校に固定されるバグの修正]
+patch=1,EE,001BC254,word,24080000
+
+[組んでいない相手校との練習試合(幽霊試合)が発生するバグの修正]
+patch=1,EE,001ADE84,word,00021827
+patch=1,EE,001ADE88,word,1060FFD1
+patch=1,EE,001ADE8C,word,26315618
+patch=1,EE,001ADF00,word,1060FFB3
+patch=1,EE,001ADF04,word,0043200B
+patch=1,EE,001ADF08,word,0C06F064
+
+[年間目標の達成判定バグ(目標の飛び級)の修正]
+patch=1,EE,001BD3E4,word,0220182D
